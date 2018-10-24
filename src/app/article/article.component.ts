@@ -36,10 +36,9 @@ export class ArticleComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       if (params['id']) {
         this.articleId = parseInt(params['id'], 10);
-        this.affichage = this.myArticles.find(hero => hero.id === this.articleId);
+        this.affichage = this.myArticles.find(article => article.id === this.articleId);
       }
     });
-   console.log(this.router);
   }
 
 }
